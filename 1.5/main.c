@@ -5,7 +5,7 @@
 ** Login   <louis.chegaray@epitech.eu@epitech.net>
 ** 
 ** Started on  Wed Mar  8 11:36:22 2017 Jules Spender
-** Last update Wed Mar  8 12:22:31 2017 Jules Spender
+** Last update Wed Mar  8 12:25:20 2017 Jules Spender
 */
 
 #include <stdio.h>
@@ -26,7 +26,7 @@ int	main(void)
     {
       printf("Merci d'avoir accepté de faire votre commande avec moi!\n");
       printf("Je vous laisse m'indiquer en appuyant sur la touche associée au menu que vous souhaitez\n\n\nMenu Maxi Best Of\t|1|\n\nMenu Best of\t\t|2|\n\nMenu McFirst\t\t|3|\n\nMenu Salade\t\t|4|\n\n");
-      printf("\t\t\t");
+      printf("\t\t\t|");
       scanf("%d", &menu);
       if (menu >= 1 && menu <= 4)
 	printf("Merci d'avoir choisi le menu ");
