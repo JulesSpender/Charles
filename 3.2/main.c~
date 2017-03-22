@@ -1,0 +1,53 @@
+/*
+** main.c for emacs in /home/jules/Charles/Charles/3.2
+** 
+** Made by Jules Spender
+** Login   <louis.chegaray@epitech.eu@epitech.net>
+** 
+** Started on  Wed Mar 22 10:24:28 2017 Jules Spender
+** Last update Wed Mar 22 10:56:24 2017 Jules Spender
+*/
+
+#include <stdio.h>
+
+int	main(int argc, char **argv)
+{
+  long	a, b, c, d;
+  long	div;
+
+  div = 2;
+  a = 0;
+  b = 0;
+  c = 0;
+  d = 0;
+  if (argc != 5)
+    {
+      printf("Usage : ./a.out [Nbr] [Nbr] [Nbr] [Nbr]\n");
+      return (0);
+    }
+  a = atoi(argv[1]);
+  b = atoi(argv[2]);
+  c = atoi(argv[3]);
+  d = atoi(argv[4]);
+  printf("%ld, %ld, %ld, %d\n", a, b, c, d);
+  b = b * d;
+  a = a * d;
+  c = c * b;
+  d = d * b;
+  a = a + c;
+  while (div < a && div < b)
+    {
+      if (a % div == 0 && b % div == 0)
+	{
+	  a = a / div;
+	  b = b / div;
+	  div = 2;
+	}
+      else
+	div = div + 1;
+    }
+  printf("La division est %ld\n", a);
+  printf("                 -\n");
+  printf("                 %ld\n", b);
+  return (0);
+}
